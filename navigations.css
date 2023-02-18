@@ -2,7 +2,10 @@ body {
     margin: 0 !important;
     padding: 0 ! important;
 }
-
+.menu{
+    width: 96%;
+   float: left;
+}
 ul {
     list-style-type: none;
     display: flex;
@@ -60,3 +63,17 @@ a:hover {
 
 }
 
+.search{
+    width: 4%;
+    float: left;
+    padding-top: 18px ;
+    background-color: black;
+    margin-top:0 !important;
+    text-align: center;
+}
+ .search a:hover{
+    background-color:red;
+}
+.search:hover{
+    background-color: red;
+}
