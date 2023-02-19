@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+.red {
+    border: 1px solid red;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ccc;
+    font-family: Verdana, sans-serif;
+}
+
+
+.nav {
+    display: flex;
+    min-height: 42px;
+    justify-content: space-between;
+    background-color: black;
+    padding-left: 0px;
+}
+
+.nav-list {
+    padding-left: 0px;
+    margin: auto 0px;
+    display: flex;
+}
+
+.nav-items {
+    display: inline-block;
+    list-style: none;
+    color: #fff;
+    padding-left: 0px;
+    color: white;
+}
+
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    padding: 14px;
+    ;
+}
+
+[more] {
+    position: relative;
+}
+
+.drop-down {
+    display: none;
+    background-color: rgb(88, 214, 151);
+    background-image: repeating-linear-gradient(90deg, green, yellow 10%, red 20%);
+    position: absolute;
+    z-index: 1;
+    height: max-content;
+    width: 200px;
+    color: white;
+    padding: inherit;
+    /* Kế thừa padding của thằng cha */
+}
+
+
+.more:hover .drop-down {
+    display: block;
+}
+
+a:hover {
+    background-color: #ccc;
+
+    color: black;
+}
+
+.drop-down .nav-items {
+    display: block;
+}
