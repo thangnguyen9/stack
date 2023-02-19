@@ -54,7 +54,7 @@ a {
 .drop-down {
     display: none;
     background-color: rgb(88, 214, 151);
-    background-image: repeating-linear-gradient(90deg, green, yellow 10%, red 20%);
+    background-image: repeating-linear-gradient(to bottom, green, yellow 10%, red 20%,#203594 30%,pink 40%);
     position: absolute;
     z-index: 1;
     height: max-content;
@@ -62,11 +62,16 @@ a {
     color: white;
     padding: inherit;
     /* Kế thừa padding của thằng cha */
+    transition: 6s;
 }
 
 
 .more:hover .drop-down {
     display: block;
+    
+}
+.drop-down:hover{
+    width: 600px;
 }
 
 a:hover {
