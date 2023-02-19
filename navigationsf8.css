@@ -37,14 +37,14 @@ body {
 }
 
 
-a {
+a:not(.ba) {
     display: block;
     color: white;
     text-decoration: none;
 
     text-transform: uppercase;
     padding: 14px;
-    ;
+
 }
 
 [more] {
@@ -54,7 +54,7 @@ a {
 .drop-down {
     display: none;
     background-color: rgb(88, 214, 151);
-    background-image: repeating-linear-gradient(to bottom, green, yellow 10%, red 20%,#203594 30%,pink 40%);
+    background-image: repeating-linear-gradient(to bottom, green, yellow 10%, red 20%, #203594 30%, pink 40%);
     position: absolute;
     z-index: 1;
     height: max-content;
@@ -62,16 +62,54 @@ a {
     color: white;
     padding: inherit;
     /* Kế thừa padding của thằng cha */
-    transition: 6s;
+    transition: width 5s, height 5s, transform 30s;
+    animation-name: concac;
+    animation-duration: 20s;
 }
 
+@keyframes concac {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    
+}
 
 .more:hover .drop-down {
     display: block;
-    
+
 }
-.drop-down:hover{
-    width: 600px;
+
+.drop-down:hover {
+    width: 400px;
+    height: auto;
+    transform: rotate(360deg);
 }
 
 a:hover {
@@ -82,4 +120,39 @@ a:hover {
 
 .drop-down .nav-items {
     display: block;
+}
+
+.nav-list:nth-child(2) {
+    display: block;
+}
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-box {
+    display: inline-block;
+    border: none;
+    outline: none;
+
+}
+
+#search-btn {
+    display: inline-block;
+}
+
+.ba {
+    background-color: white;
+}
+
+.ba:hover {
+    background-color: white;
+}
+
+input[type="text"] {
+    cursor: pointer;
+    text-align: center;
 }
